@@ -1,0 +1,17 @@
+package automation;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.edge.EdgeDriver;
+
+
+public class Selbrowseraction {
+
+	public static void main(String[] args) {
+		
+		WebDriver driver=new EdgeDriver();
+		String url="https://www.flipkart.com/";
+		driver.get(url);
+		System.out.println("Website Title:" +driver.getTitle());
+		driver.close();
+	
+		
+		}

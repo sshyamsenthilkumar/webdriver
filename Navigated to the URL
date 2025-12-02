@@ -1,0 +1,25 @@
+1. navigated to the URL
+
+package automation;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+
+public class Selbrowseraction {
+
+	public static void main(String[] args) {
+	
+		String expectedurl="https://www.saucedemo.com/";
+		
+		WebDriver driver=new ChromeDriver();
+		driver.get(expectedurl);//navigate the site
+		String actualurl=driver.getCurrentUrl();//get current URL
+		System.out.println(" current URL is: " + actualurl);
+		if(actualurl.equals(expectedurl)) {
+			System.out.println(" URL is correct");
+		} else {
+			System.out.println(" URL is incorrect");
+		}
+		driver.close();// to close the current window
+  }
+}
